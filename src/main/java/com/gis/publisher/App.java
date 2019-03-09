@@ -77,7 +77,7 @@ public class App {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                // Send the loan record to Kafka Broker in Async mode. Callback is called after the record receiving the acknowledgement from broker
+                // Send the gis record to Kafka Broker in Async mode. Callback is called after the record receiving the acknowledgement from broker
                 producer.send(gisRecord, ((metadata, exception) -> {
 
                     if (metadata != null) {
